@@ -1,7 +1,7 @@
 
 <div>
-  <p-button label="Ajouter un nouvelle pizza"></p-button>
-  <p-table [value]="pizzas.value()!">
+  <p-button (onClick)="openPizzaForm()" label="Ajouter une nouvelle pizza"></p-button>
+  <p-table [loading]="pizzas.isLoading()" [value]="pizzas.value()!">
     <ng-template #header>
       <tr>
         <th>Id</th>
@@ -24,6 +24,5 @@
     </ng-template>
   </p-table>
 </div>
-
 
 <p-toast />

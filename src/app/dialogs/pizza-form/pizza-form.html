@@ -1,0 +1,16 @@
+<form (submit)="submit($event)">
+
+    <div class="mb-5">
+        <input pInputText [formField]="form.name">
+    </div>
+    <div class="mb-5">
+        <input pInputText type="number" [formField]="form.price" />
+    </div>
+    <div class="mb-5">
+        <input type="file" (change)="onFileChange($event)" />
+    </div>
+    <div class="mb-5">
+        <p-button type="submit" label="Envoyer" icon="pi pi-send"></p-button>
+    </div>
+
+</form>
